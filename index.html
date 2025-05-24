@@ -217,6 +217,20 @@
     transform: scale(1.2);
     transition: all 0.3s ease;
 }
+
+.header-social-icons {
+    display: flex;
+    gap: 10px;
+}
+.header-social-icons a {
+    color: white;
+    margin-left: 12px;
+    font-size: 1.4em;
+}
+.header-social-icons a:hover {
+    color: #ffcc00;
+    transition: all 0.3s ease;
+}
 </style>
 <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -227,6 +241,18 @@
 <a href="#" onclick="showPopup('researchModal')">Research</a>
 <a href="#projects" onclick="document.getElementById('modal').style.display='flex';">Projects</a>
 <a href="#" onclick="toggleDark()">🌓</a>
+</div>
+
+<div class="header-social-icons">
+<a href="mailto:ritik.pokharel21@gmail.com" target="_blank" title="Email Me">
+<i class="fas fa-envelope"></i>
+</a>
+<a href="https://www.facebook.com/writeek.pokharel.3" target="_blank" title="Facebook Profile">
+<i class="fab fa-facebook-square"></i>
+</a>
+<a href="https://www.linkedin.com/in/ritik-horti/" target="_blank" title="LinkedIn Profile">
+<i class="fab fa-linkedin"></i>
+</a>
 </div>
 </nav>
 <body>
@@ -352,7 +378,7 @@ Baton Rouge, LA 70803</p>
 </p>
 <p>
 <a href="https://www.facebook.com/writeek.pokharel.3" target="_blank">
-<i class="fab fa-facebook" style="margin-right: 8px;"></i>
+<i class="fab fa-facebook-square" style="margin-right: 8px;"></i>
                 Facebook Profile
             </a>
 </p>

@@ -175,20 +175,79 @@
             cursor: pointer;
             font-weight: bold;
         }
-    </style>
+    
+.header-banner {
+    background: linear-gradient(-45deg, #5e2ca5, #ffcc00, #5e2ca5, #ffcc00);
+    background-size: 400% 400%;
+    animation: bannerShift 10s ease infinite;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+@keyframes bannerShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.section:nth-child(even) {
+    background: linear-gradient(to right, #f0ebff, #fff9e6);
+    padding: 20px;
+    border-radius: 10px;
+}
+</style>
 <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
-
 <nav>
-<div><strong>Ritik Pokharel</strong></div>
+<div><strong>Ritik Pokharel</strong><a href="#" onclick="showPopup('skillsModal')" title="Skills">Skills</a></div>
 <div>
-<a href="#about">About</a>
-<a href="#research">Research</a>
+<a href="#" onclick="showPopup('aboutModal')">About</a>
+<a href="#" onclick="showPopup('researchModal')">Research</a>
 <a href="#projects" onclick="document.getElementById('modal').style.display='flex';">Projects</a>
 <a href="#" onclick="toggleDark()">🌓</a>
 </div>
 </nav>
 <body>
+
+<div class="header-banner">Welcome to Ritik Pokharel's Digital CV &amp; Research Portfolio</div>
+<style>
+.popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding: 60px 20px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.popup-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    color: #000;
+}
+.close-popup {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+<script>
+function showPopup(id) {
+    document.getElementById(id).style.display = "block";
+}
+function closePopup(id) {
+    document.getElementById(id).style.display = "none";
+}
+</script>
 <img alt="Ritik Pokharel" class="profile-img" src="profile.jpg"/>
 <h1>RITIK POKHAREL</h1>
 <p class="intro">Graduate Research Assistant | Precision Agriculture | Yield Modeling | UAV + Satellite Remote Sensing | Agri-AI Researcher</p>
@@ -196,7 +255,6 @@
 <a href="https://www.facebook.com/writeek.pokharel.3" target="_blank"><i class="fab fa-facebook-square"></i></a>
 <a href="https://www.linkedin.com/in/ritik-horti/" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
-<a class="download-btn" download="" href="Ritik_Pokharel_Final_CV.docx">📄 Download CV</a>
 <div class="section">
 <h2>RITIK POKHAREL</h2>
 <p>Graduate Research Assistant | Precision Agriculture | Yield Modeling | UAV + Satellite Remote Sensing | Agri-AI Researcher</p>
@@ -275,7 +333,6 @@ Baton Rouge, LA 70803</p>
 <p>🔗 Facebook:</p>
 <p>🔗 LinkedIn:</p>
 </div>
-
 <div class="modal" id="modal">
 <div class="modal-content">
 <span class="modal-close" onclick="document.getElementById('modal').style.display='none';">×</span>
@@ -287,7 +344,6 @@ Baton Rouge, LA 70803</p>
 </ul>
 </div>
 </div>
-
 <script>
             function toggleDark() {
                 document.body.classList.toggle("dark-mode");
@@ -296,5 +352,44 @@ Baton Rouge, LA 70803</p>
                 window.print();
             }
         </script>
-<button class="print-btn" onclick="printPage()">🖨️ Print CV</button></body>
+<button class="print-btn" onclick="printPage()">🖨️ Print CV</button>
+<div class="section" id="blog">
+<h2>BLOG TIMELINE</h2>
+<ul>
+<li><strong>May 2025:</strong> Insights from DSSAT training at Griffin, Georgia.</li>
+<li><strong>April 2025:</strong> Evaluating NDRE index for nitrogen optimization in rice.</li>
+<li><strong>March 2025:</strong> Integrating UAV imagery with DSSAT for yield prediction.</li>
+</ul>
+</div>
+<button onclick="scrollToTop()" style="position:fixed;bottom:80px;right:20px;background-color:#5e2ca5;color:white;padding:10px 15px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;">⬆️ Back to Top</button>
+<script>
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+<div class="popup-modal" id="aboutModal">
+<div class="popup-content">
+<span class="close-popup" onclick="closePopup('aboutModal')">×</span>
+<h2>About</h2>
+<p>I’m Ritik Pokharel, a passionate researcher at the intersection of agriculture, data science, and automation...</p>
+</div>
+</div>
+<div class="popup-modal" id="researchModal">
+<div class="popup-content">
+<span class="close-popup" onclick="closePopup('researchModal')">×</span>
+<h2>Research Work</h2>
+<p>Crop modeling, UAV analysis, NDRE-based nitrogen optimization, DSSAT integration, and AI-driven yield prediction.</p>
+</div>
+</div>
+<div class="popup-modal" id="skillsModal">
+<div class="popup-content">
+<span class="close-popup" onclick="closePopup('skillsModal')">×</span>
+<h2>Skills</h2>
+<ul>
+<li>Python, R, QGIS, Pix4D, DSSAT</li>
+<li>Machine Learning, UAV Mapping, NDRE Analysis</li>
+</ul>
+</div>
+</div>
+</body>
 </html>

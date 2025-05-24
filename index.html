@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ritik Pokharel | CV</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ritik Pokharel | CV</title>
+<style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f8f5fc;
@@ -97,22 +98,105 @@
                 font-size: 1.3em;
             }
         }
+    
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        body.dark-mode {
+            background-color: #1a1a2e;
+            color: #f0f0f0;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #5e2ca5;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin-left: 15px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .dark-toggle {
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal-close {
+            float: right;
+            cursor: pointer;
+            font-weight: bold;
+        }
     </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
+<nav>
+<div><strong>Ritik Pokharel</strong></div>
+<div>
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#projects" onclick="document.getElementById('modal').style.display='flex';">Projects</a>
+<a href="#" onclick="toggleDark()">🌓</a>
+</div>
+</nav>
 <body>
-
-<img src="profile.jpg" alt="Ritik Pokharel" class="profile-img" />
-
+<img alt="Ritik Pokharel" class="profile-img" src="profile.jpg"/>
 <h1>RITIK POKHAREL</h1>
 <p class="intro">Graduate Research Assistant | Precision Agriculture | Yield Modeling | UAV + Satellite Remote Sensing | Agri-AI Researcher</p>
-
 <div class="social-icons">
-    <a href="https://www.facebook.com/writeek.pokharel.3" target="_blank"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://www.linkedin.com/in/ritik-horti/" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.facebook.com/writeek.pokharel.3" target="_blank"><i class="fab fa-facebook-square"></i></a>
+<a href="https://www.linkedin.com/in/ritik-horti/" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
-
-<a class="download-btn" href="Ritik_Pokharel_Final_CV.docx" download>📄 Download CV</a>
+<a class="download-btn" download="" href="Ritik_Pokharel_Final_CV.docx">📄 Download CV</a>
 <div class="section">
 <h2>RITIK POKHAREL</h2>
 <p>Graduate Research Assistant | Precision Agriculture | Yield Modeling | UAV + Satellite Remote Sensing | Agri-AI Researcher</p>
@@ -142,13 +226,13 @@
 • Leading machine learning model development for yield prediction
 • Integrating DSSAT crop model with satellite and sensor data
 • Working on optimizing nitrogen use efficiency and phenological modeling in rice</p>
-<p>Senior Research Manager (Dec 2021 – Dec 2023) – Gorkha Agri Group, Kalanki-13, Kathmandu & Tulsipur, Dang
+<p>Senior Research Manager (Dec 2021 – Dec 2023) – Gorkha Agri Group, Kalanki-13, Kathmandu &amp; Tulsipur, Dang
 • Disease identification and management in rice crops
 • Worked with breeding and seed quality control teams
 • Provided training and plant health clinics
 • Partnered with NSAF, CIMMYT, SEAN on seed production</p>
 <p>Project Coordinator (Feb 2020 – Aug 2021) – Shreenagar Agro Farm, Butwal, Rupandehi
-• Led employment & training projects for 2500+ farmers
+• Led employment &amp; training projects for 2500+ farmers
 • Collaborated with UKaid, WEP, Baliyo Nepal, SKIH
 • Promoted climate-smart practices and biodiversity conservation</p>
 </div>
@@ -169,13 +253,13 @@
 <li>Full undergraduate scholarship – Tribhuvan University</li>
 <li>Vice President – Technical Students’ Association of Nepal (TSAN), Rupandehi</li>
 <li>All-Nepal Chess Tournament Champion</li>
-<li>Sports & quiz competition medals (table tennis, cricket)</li>
+<li>Sports &amp; quiz competition medals (table tennis, cricket)</li>
 </ul>
 </div>
 <div class="section">
 <h2>SKILLS</h2>
 <ul>
-<li>R, Python, QGIS, Pix4D, PlanetScope, DSSAT & crop modeling</li>
+<li>R, Python, QGIS, Pix4D, PlanetScope, DSSAT &amp; crop modeling</li>
 <li>Machine Learning for yield forecasting</li>
 <li>Remote sensing, NDRE analysis, UAV mapping</li>
 <li>Communication, teamwork, and leadership</li>
@@ -191,5 +275,26 @@ Baton Rouge, LA 70803</p>
 <p>🔗 Facebook:</p>
 <p>🔗 LinkedIn:</p>
 </div>
-</body>
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="modal-close" onclick="document.getElementById('modal').style.display='none';">×</span>
+<h2>Project Highlights</h2>
+<ul>
+<li><strong>Rice Yield Prediction:</strong> AI + DSSAT + UAV data.</li>
+<li><strong>Nitrogen Optimization:</strong> Efficiency trials and modeling.</li>
+<li><strong>GIS Mapping:</strong> Soil fertility in Ilam, Nepal.</li>
+</ul>
+</div>
+</div>
+
+<script>
+            function toggleDark() {
+                document.body.classList.toggle("dark-mode");
+            }
+            function printPage() {
+                window.print();
+            }
+        </script>
+<button class="print-btn" onclick="printPage()">🖨️ Print CV</button></body>
 </html>

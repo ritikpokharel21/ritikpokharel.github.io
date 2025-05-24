@@ -217,23 +217,9 @@
     transform: scale(1.2);
     transition: all 0.3s ease;
 }
-
-.header-social-icons {
-    display: flex;
-    gap: 10px;
-}
-.header-social-icons a {
-    color: white;
-    margin-left: 12px;
-    font-size: 1.4em;
-}
-.header-social-icons a:hover {
-    color: #ffcc00;
-    transition: all 0.3s ease;
-}
 </style>
 <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
-</head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/></head>
 <nav>
 <div><strong>Ritik Pokharel</strong><a href="#" onclick="showPopup('skillsModal')" title="Skills">Skills</a></div>
 <div>
@@ -241,18 +227,6 @@
 <a href="#" onclick="showPopup('researchModal')">Research</a>
 <a href="#projects" onclick="document.getElementById('modal').style.display='flex';">Projects</a>
 <a href="#" onclick="toggleDark()">🌓</a>
-</div>
-
-<div class="header-social-icons">
-<a href="mailto:ritik.pokharel21@gmail.com" target="_blank" title="Email Me">
-<i class="fas fa-envelope"></i>
-</a>
-<a href="https://www.facebook.com/writeek.pokharel.3" target="_blank" title="Facebook Profile">
-<i class="fab fa-facebook-square"></i>
-</a>
-<a href="https://www.linkedin.com/in/ritik-horti/" target="_blank" title="LinkedIn Profile">
-<i class="fab fa-linkedin"></i>
-</a>
 </div>
 </nav>
 <body>
@@ -371,19 +345,19 @@ Baton Rouge, LA 70803</p>
 <div class="section">
 <h2>SOCIAL LINKS</h2>
 <p>
-<a href="mailto:ritik.pokharel21@gmail.com" target="_blank">
+<a href="mailto:ritik.pokharel21@gmail.com" target="_blank" title="Email Me">
 <i class="fas fa-envelope" style="margin-right: 8px;"></i>
                 ritik.pokharel21@gmail.com
             </a>
 </p>
 <p>
-<a href="https://www.facebook.com/writeek.pokharel.3" target="_blank">
+<a href="https://www.facebook.com/writeek.pokharel.3" target="_blank" title="Facebook Profile">
 <i class="fab fa-facebook-square" style="margin-right: 8px;"></i>
                 Facebook Profile
             </a>
 </p>
 <p>
-<a href="https://www.linkedin.com/in/ritik-horti/" target="_blank">
+<a href="https://www.linkedin.com/in/ritik-horti/" target="_blank" title="LinkedIn Profile">
 <i class="fab fa-linkedin" style="margin-right: 8px;"></i>
                 LinkedIn Profile
             </a>
@@ -446,6 +420,14 @@ function scrollToTop() {
 <li>Machine Learning, UAV Mapping, NDRE Analysis</li>
 </ul>
 </div>
+</div>
+
+<div class="section" id="fun">
+<h2>♟️ CHESS CHALLENGE</h2>
+<p>Think you can outsmart me? Let’s find out on the board.</p>
+<a href="https://lichess.org" style="display:inline-block;background:#5e2ca5;color:white;padding:10px 20px;border-radius:8px;font-weight:bold;text-decoration:none;" target="_blank">
+    Challenge Me to Chess ♟️
+  </a>
 </div>
 </body>
 </html>
